@@ -3,6 +3,8 @@
     position: relative;
     font-family: Arial;
   }
+  
+
   .logo img{
     position: absolute;
     top: 9%;
@@ -12,59 +14,100 @@
    
    
   }
+
+  #first{
+    
+    background: url('./IMAGES/full-stack_developer.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+    background-attachment: fixed;
+    mix-blend-mode: darken;
+    position: relative;
+  }
+  .first{
+    width: 100%;
+    text-align: center;
+    margin-top: 2%;
+    position: absolute;
+    
+  }
   .logo h1{
     position: absolute;
-    font-size: 40px;
+    font-size: 60px;
     color: rgb(255, 255, 255);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    top: 18%;
-    right:40.5%;
+    align-items: center;
+    display: inline-block;
+    padding: 10px 18px;
+    margin-top: 210px;
+    margin-left: -225px;
 }
+   
+
 .logo span{
-    font-size: 40px;
-    color: rgb(255, 0, 212);
+    font-size: 60px;
+    color: rgb(0, 162, 116);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .logo h3{
     position: absolute;
-    font-size: 20px;
+    font-size: 30px;
     color: rgb(255, 255, 255);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    top: 22%;
-    right: 44.5%;
+    margin-top: 330px;
+    margin-left: -148px;
+    align-items: center;
+    display: inline-block;
+    padding: 10px 18px;
 }
+
+
+ .button{
+    position: absolute;
+    background-color: transparent;
+    border: 2px solid;
+    border-color:rgb(0, 162, 116);
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 5%;
+    color: #fff;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: -90px;
+    margin-top: 420px ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    align-items: center;
+} 
 .button a{
-    position: absolute;
-    background-color: transparent;
-    border: 2px solid;
-    border-color: rgb(255, 0, 162);
-    padding: 10px 18px;
-    text-decoration: none;
-    border-radius: 5%;
-    color: rgb(255, 0, 212);
-    font-weight: bold;
-    display: inline-block;
-    margin-left: 635px;
-    top: 26%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #009b74;
     
-}
-.button2 a{
-    position: absolute;
-    background-color: transparent;
-    border: 2px solid;
-    border-color: rgb(255, 0, 162);
-    padding: 10px 18px;
     text-decoration: none;
-    border-radius: 5%;
-    color: rgb(255, 0, 212);
-    font-weight: bold;
-    display: inline-block;
-    margin-left: 792px;
-    top:26%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     
-}
+} 
+
+.button:hover {
+    color: rgb(255, 255, 255);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+    background-color: #2d473c;
+    
+  }
+   
+  .check{
+    margin-top: 500px;
+    margin-left: -28px;
+    
+  }
+
+  .check i a:hover {
+    box-shadow: #00ff95;
+    color: #fff;
+
+  }
+
+
+
+
 .abimg img{
     width: 50%;
     
@@ -84,7 +127,7 @@
 }
 .heading span{
     font-size: 25px;
-    color: rgb(118, 118, 183);
+    color: rgb(1, 145, 114);
 }
 .about-content{
     display: grid;
@@ -123,6 +166,7 @@
 }
 .skill-container{
     display: grid;
+    padding-top: 50px;
     grid-template-columns: repeat(2,1fr);
     align-items: center ;
     gap: 2rem;
@@ -133,48 +177,121 @@
     padding-left: 4rem;
     border-radius: 10%;
 }
-.bar-box{
+
+.skill-bars{
+    padding: 25px 30px;
+    width: 600px;
+    background: #e9fcf4;
+    
+    border-radius: 10px;
+    }
+    .skill-bars .bar{
+    margin: 20px 0;
+    }
+    .skill-bars .bar:first-child{
+    margin-top: 0px;
+    }
+    .skill-bars .bar .info{
+    margin-bottom: 5px;
+    }
+    .skill-bars .bar .info span{
+    font-weight: 500;
+    font-size: 17px;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+    color: rgb(4, 73, 50);
+    }
+    @keyframes showText {
+    100%{
+      opacity: 1;
+    }
+    }
+    .skill-bars .bar .progress-line{
+    height: 10px;
+    width: 100%;
+    background: #b7f8e5;
     position: relative;
-    display: flex;
-}
-.bar-box h3{
-    font-size: 25px;
-    font-weight: 800;
-}
-.bar-box span{
-    font-size: 23px;
-    font-weight: 700;
-}
-.light-bar{
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 10px;
+
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+                0 1px rgba(255,255,255,0.8);
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    }
+    @keyframes animate {
+    100%{
+      transform: scaleX(1);
+    }
+    }
+    .bar .progress-line span{
+    height: 100%;
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 8px;
-    background-color: rgb(199, 211, 212);
-    border-radius: 8px
-}
-.percent-bar{
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: #009b74;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+    }
+    .bar .progress-line.html span{
+    width: 90%;
+    }
+    .bar .progress-line.css span{
+    width: 88%;
+    }
+    
+    .bar .progress-line.python span{
+    width: 65%;
+    }
+    .bar .progress-line.mysql span{
+    width: 50%;
+    }
+    .progress-line span::before{
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 8px;
-    background-color: rgb(198, 20, 142);
-    border-radius: 8px
-}
-.html-bar{
-    width: 85%;
-}
-.css-bar{
-    width: 80%;
-}
-.js-bar{
-    width: 70%;
-}
-.angular-bar{
-    width: 68%;
-}
+    content: "";
+    top: -10px;
+    right: 0;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+    }
+    .progress-line span::after{
+    position: absolute;
+    top: -28px;
+    right: 0;
+    font-weight: 500;
+    background: #26564c;
+    color: #fff;
+    padding: 1px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+    }
+    @keyframes showText2 {
+    100%{
+      opacity: 1;
+    }
+    }
+    .progress-line.html span::after{
+    content: "90%";
+    }
+    .progress-line.css span::after{
+    content: "88%";
+    }
+    
+    .progress-line.python span::after{
+    content: "65%";
+    }
+    .progress-line.mysql span::after{
+    content: "50%";
+    }
+
 #contact{
     margin-left: 8%;
     margin-top: 13%;
@@ -188,25 +305,7 @@
     
 
 }
-.icon{
-    width: 50px;
-    height: 50px;
-    border: 2px solid;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    margin: 0 10px;
-    background-color: rgb(222, 227, 231);
-}
-.icon i{
-    font-size: 25px;
-    
-}
-.icon i:hover{
-    color: red;
-}
+
 footer{
     margin-top: 2rem;
     font-weight: bolder;
@@ -304,4 +403,241 @@ footer{
     .wrapper .whatsapp:hover .tooltip{
     background: #00ff95;
     }
+   
+    @media screen and (max-width: 1440px){
+
+        
+        .skill-bars{
+            margin-top: 5%;
+            padding: 5px 10px;
+            width:500px;
+        }
+
+        .skill-bars .bar .info span{
+            font-weight: 300;
+            font-size: 12px;
+            opacity: 0;
+            animation: showText 0.5s 1s linear forwards;
+            color: rgb(4, 73, 50);
+            }
+
+            .skill-img img{
+                width: 250px;
+                height: 190px;
+                object-position: center;
+                padding-left: 3rem;
+                border-radius: 10%;
+            }
+            .logo h1{
+           font-size: 40px;
+           padding-left: 70px;
+          }
+          .logo span{
+            font-size: 40px;
+          }
+          .logo h3{
+            font-size: 25px;
+            padding-left: 30px;
+          }
+
+    }
+    @media screen and (max-width: 860px){
+
+        
+        .skill-bars{
+            margin-top: 5%;
+            padding: 5px 10px;
+            width:400px;
+        }
+
+        .skill-bars .bar .info span{
+            font-weight: 300;
+            font-size: 12px;
+            opacity: 0;
+            animation: showText 0.5s 1s linear forwards;
+            color: rgb(4, 73, 50);
+            }
+
+            .skill-img img{
+                width: 250px;
+                height: 180px;
+                object-position: center;
+                padding-left: 0rem;
+                border-radius: 10%;
+            }
+            .logo h1{
+            font-size: 35px;
+           padding-left: 100px;
+           padding-top: 50px;
+          }
+          .logo span{
+            font-size: 35px;
+          }
+          .logo h3{
+            font-size: 20px;
+            padding-left: 57px;
+            padding-top: 20px;
+          }
+
+    }
+    @media screen and (max-width: 690px){
+
+        
+        .skill-bars{
+            margin-top: 5%;
+            padding: 5px 10px;
+            width:300px;
+        }
+
+        .skill-bars .bar .info span{
+            font-weight: 300;
+            font-size: 12px;
+            opacity: 0;
+            animation: showText 0.5s 1s linear forwards;
+            color: rgb(4, 73, 50);
+            }
+
+            .skill-img img{
+                width: 200px;
+                height: 150px;
+                object-position: center;
+                padding-left: 1rem;
+                border-radius: 10%;
+            }
+            .logo h1{
+           font-size: 30px;
+           padding-left: 120px;
+           padding-top: 60px;
+          }
+          .logo span{
+            font-size: 30px;
+          }
+          .logo h3{
+            font-size: 15px;
+            padding-left: 80px;
+            padding-top: 20px;
+          }
+
+    }
+    @media screen and (max-width: 585px){
+
+        
+        .skill-bars{
+            margin-top: 5%;
+            padding: 5px 10px;
+            width:250px;
+        }
+
+        .skill-bars .bar .info span{
+            font-weight: 300;
+            font-size: 12px;
+            opacity: 0;
+            animation: showText 0.5s 1s linear forwards;
+            color: rgb(4, 73, 50);
+            }
+
+            .skill-img img{
+                width: 150px;
+                height: 100px;
+                object-position: center;
+                padding-left: 1rem;
+                border-radius: 10%;
+            }
+            .logo h1{
+           font-size: 30px;
+           padding-left: 120px;
+           padding-top: 60px;
+          }
+          .logo span{
+            font-size: 30px;
+          }
+          .logo h3{
+            font-size: 15px;
+            padding-left: 80px;
+            padding-top: 20px;
+          }
+
+    }
+    @media screen and (max-width: 461px){
+
+        
+        .skill-bars{
+            margin-top: 5%;
+            padding: 5px 10px;
+            width:200px;
+        }
+
+        .skill-bars .bar .info span{
+            font-weight: 300;
+            font-size: 12px;
+            opacity: 0;
+            animation: showText 0.5s 1s linear forwards;
+            color: rgb(4, 73, 50);
+            }
+
+            .skill-img img{
+                width: 100px;
+                height: 80px;
+                object-position: center;
+                padding-left: 0rem;
+                border-radius: 10%;
+            }
+            .logo h1{
+           font-size: 30px;
+           padding-left: 120px;
+           padding-top: 60px;
+          }
+          .logo span{
+            font-size: 30px;
+          }
+          .logo h3{
+            font-size: 15px;
+            padding-left: 80px;
+            padding-top: 20px;
+          }
+
+    }
+    @media screen and (max-width: 365px){
+
+        
+        .skill-bars{
+            margin-top: 5%;
+            padding: 5px 10px;
+            width:120px;
+        }
+
+        .skill-bars .bar .info span{
+            font-weight: 300;
+            font-size: 12px;
+            opacity: 0;
+            animation: showText 0.5s 1s linear forwards;
+            color: rgb(4, 73, 50);
+            }
+
+            .skill-img img{
+                width: 100px;
+                height: 80px;
+                object-position: center;
+                padding-left: 0rem;
+                border-radius: 10%;
+            }
+            .logo h1{
+           font-size: 30px;
+           padding-left: 120px;
+           padding-top: 60px;
+          }
+          .logo span{
+            font-size: 30px;
+          }
+          .logo h3{
+            font-size: 15px;
+            padding-left: 80px;
+            padding-top: 20px;
+          }
+
+    }
+
+    
+
+    
     
