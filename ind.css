@@ -439,6 +439,12 @@ footer{
             font-size: 25px;
             padding-left: 30px;
           }
+          .button{
+            margin-right: 80px;
+          }
+          .check{
+            padding-right: 2px;
+          }
 
     }
     @media screen and (max-width: 860px){
@@ -595,6 +601,13 @@ footer{
             padding-left: 80px;
             padding-top: 20px;
           }
+          .button{
+            padding-left: 30px;
+          }
+          .check{
+            padding-left: 20px;
+          }
+
 
     }
     @media screen and (max-width: 365px){
@@ -633,6 +646,13 @@ footer{
             font-size: 15px;
             padding-left: 80px;
             padding-top: 20px;
+          }
+
+          .button{
+            padding-left: 30px;
+          }
+          .check{
+            padding-left: 20px;
           }
 
     }
